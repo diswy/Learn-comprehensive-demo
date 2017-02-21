@@ -1,0 +1,63 @@
+package fuzitao.diswy.learn_comprehensive_demo.view;
+
+import android.content.Context;
+import android.support.design.widget.CoordinatorLayout;
+import android.util.AttributeSet;
+import android.util.DisplayMetrics;
+import android.view.MotionEvent;
+import android.view.View;
+
+/**
+ * 一个简单的可拖动控件
+ * Created by Fu.Zi.Tao on 2017/2/21 0021.
+ */
+
+public class DragView extends View {
+    private int lastX;
+    private int lastY;
+    private int mWidth;
+    private int mHeight;
+
+    private int screenWidth;
+    private int screenHeight;
+
+    public DragView(Context context) {
+        super(context);
+        DisplayMetrics display = context.getResources().getDisplayMetrics();
+        screenWidth = display.widthPixels;
+        screenHeight = display.heightPixels;
+    }
+
+    public DragView(Context context, AttributeSet attrs) {
+        super(context, attrs);
+        mWidth = getMeasuredWidth();
+        mHeight = getMeasuredHeight();
+    }
+
+    @Override
+    public boolean onTouchEvent(MotionEvent event) {
+        int x = (int) event.getRawX();
+        int y = (int) event.getRawY();
+
+        switch (event.getAction()) {
+            case MotionEvent.ACTION_DOWN:
+                break;
+            case MotionEvent.ACTION_MOVE:
+                CoordinatorLayout.MarginLayoutParams layoutParams = (CoordinatorLayout.MarginLayoutParams) getLayoutParams();
+                int left = layoutParams.leftMargin + x - lastX;
+                int top = layoutParams.topMargin + y - lastY;
+
+                layoutParams.leftMargin = left;
+                layoutParams.topMargin = top;
+                setLayoutParams(layoutParams);
+                requestLayout();
+                break;
+            case MotionEvent.ACTION_UP:
+                break;
+        }
+
+        lastX = x;
+        lastY = y;
+        return true;
+    }
+}

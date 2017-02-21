@@ -1,10 +1,8 @@
 <resources>
     <string name="app_name">Learn-comprehensive-demo</string>
-
-
-
     <string name="main_btn_coordinator_layout">CoordinatorLayout使用</string>
     <string name="main_btn_toolbar_animation">玩转AppBarLayout</string>
+    <string name="coordinator_layout_link_tv">联动控件</string>
 
 
 </resources>

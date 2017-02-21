@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="fuzitao.diswy.learn_comprehensive_demo.ui.CoordinatorLayout">
+
+    <fuzitao.diswy.learn_comprehensive_demo.view.DragView
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="60dp"
+        android:background="@android:color/white"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="60dp"
+        android:text="@string/coordinator_layout_link_tv"
+        android:textColor="@android:color/white"
+        app:layout_behavior="fuzitao.diswy.learn_comprehensive_demo.coordinator.MyBehavior"/>
+
+</android.support.design.widget.CoordinatorLayout>
