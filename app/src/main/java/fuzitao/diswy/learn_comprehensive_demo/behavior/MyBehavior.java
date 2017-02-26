@@ -1,4 +1,4 @@
-package fuzitao.diswy.learn_comprehensive_demo.coordinator;
+package fuzitao.diswy.learn_comprehensive_demo.behavior;
 
 import android.content.Context;
 import android.support.design.widget.CoordinatorLayout;

@@ -4,7 +4,7 @@ import android.os.Bundle;
 
 import fuzitao.diswy.learn_comprehensive_demo.R;
 
-public class CoordinatorLayout extends BaseActivity {
+public class CoordinatorDemo extends BaseActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
