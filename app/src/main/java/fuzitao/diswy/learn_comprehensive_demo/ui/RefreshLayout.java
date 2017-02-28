@@ -6,6 +6,8 @@ import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
+import android.view.View;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -35,6 +37,24 @@ public class RefreshLayout extends BaseActivity {
 
         initView();
         initData();
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+
+        adapter.setInit(true);
+        adapter.setCanLoop(true);
+        adapter.notifyDataSetChanged();
+    }
+
+    @Override
+    protected void onStop() {
+        super.onStop();
+
+        adapter.setCanLoop(false);
+        adapter.setInit(true);
+        adapter.notifyDataSetChanged();
     }
 
     private void initData() {
@@ -116,6 +136,7 @@ public class RefreshLayout extends BaseActivity {
                 }
             }
         });
+
     }
 
     @Override
