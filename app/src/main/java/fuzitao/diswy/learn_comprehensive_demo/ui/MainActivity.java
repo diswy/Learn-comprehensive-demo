@@ -25,7 +25,8 @@ public class MainActivity extends BaseActivity {
     }
 
 
-    @OnClick({R.id.main_btn_coordinator_layout, R.id.main_btn_toolbar_animation, R.id.main_btn_refresh_layout})
+    @OnClick({R.id.main_btn_coordinator_layout, R.id.main_btn_toolbar_animation, R.id.main_btn_refresh_layout
+            , R.id.main_btn_learn_json})
     public void onClick(View view) {
         switch (view.getId()) {
             case R.id.main_btn_coordinator_layout:// 联动控件
@@ -35,6 +36,9 @@ public class MainActivity extends BaseActivity {
                 break;
             case R.id.main_btn_refresh_layout:// 上拉、下拉刷新
                 startActivity(new Intent(MainActivity.this, RefreshLayout.class));
+                break;
+            case R.id.main_btn_learn_json:// Gson学习
+                startActivity(new Intent(MainActivity.this, LearnGson.class));
                 break;
         }
     }
