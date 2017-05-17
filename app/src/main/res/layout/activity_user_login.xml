@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.autolayout.AutoRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    tools:context="fuzitao.diswy.learn_comprehensive_demo.mvp.UserLoginActivity">
+
+
+    <TextView
+        android:gravity="center"
+        android:id="@+id/tv_name"
+        android:layout_width="wrap_content"
+        android:layout_height="80px"
+        android:layout_marginStart="48dp"
+        android:layout_marginTop="32dp"
+        android:text="姓名"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:gravity="center"
+        android:id="@+id/tv_psd"
+        android:layout_width="wrap_content"
+        android:layout_height="80px"
+        android:layout_alignStart="@+id/tv_name"
+        android:layout_below="@+id/tv_name"
+        android:layout_marginTop="48dp"
+        android:text="密码" />
+
+    <EditText
+        android:id="@+id/et_psd"
+        android:layout_width="wrap_content"
+        android:layout_height="80px"
+        android:layout_marginStart="31dp"
+        android:ems="10"
+        android:inputType="textPassword"
+        android:layout_alignTop="@+id/tv_psd"
+        android:layout_toEndOf="@+id/tv_psd" />
+
+    <EditText
+        android:id="@+id/et_name"
+        android:layout_width="wrap_content"
+        android:layout_height="80px"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:layout_alignTop="@+id/tv_name"
+        android:layout_alignStart="@+id/et_psd" />
+
+    <Button
+        android:id="@+id/btn_login"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="48dp"
+        android:text="Login"
+        android:layout_below="@+id/et_psd"
+        android:layout_alignStart="@+id/et_psd" />
+
+    <Button
+        android:id="@+id/btn_clear"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/btn_login"
+        android:layout_alignEnd="@+id/et_psd"
+        android:text="clear" />
+
+</com.zhy.autolayout.AutoRelativeLayout>

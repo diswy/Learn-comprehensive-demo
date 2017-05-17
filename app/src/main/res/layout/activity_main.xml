@@ -45,6 +45,13 @@
             android:text="@string/main_btn_learn_json"
             android:textAllCaps="false"/>
 
+        <Button
+            android:id="@+id/main_btn_learn_mvp"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:text="@string/main_btn_learn_mvp"
+            android:textAllCaps="false"/>
+
     </LinearLayout>
 
 

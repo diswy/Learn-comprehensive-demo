@@ -4,6 +4,7 @@
     <string name="main_btn_toolbar_animation">玩转AppBarLayout</string>
     <string name="main_btn_refresh_layout">上拉、下拉刷新</string>
     <string name="main_btn_learn_json">Learn Gson</string>
+    <string name="main_btn_learn_mvp">Learn Mvp</string>
     <string name="coordinator_layout_link_tv">联动控件</string>
     <string name="loading">加载中...</string>
     <string name="no_data">没有更多数据了</string>

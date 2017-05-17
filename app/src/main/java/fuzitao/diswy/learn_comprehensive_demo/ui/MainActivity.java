@@ -9,6 +9,7 @@ import android.widget.Button;
 import butterknife.Bind;
 import butterknife.OnClick;
 import fuzitao.diswy.learn_comprehensive_demo.R;
+import fuzitao.diswy.learn_comprehensive_demo.mvp.UserLoginActivity;
 
 public class MainActivity extends BaseActivity {
 
@@ -26,7 +27,7 @@ public class MainActivity extends BaseActivity {
 
 
     @OnClick({R.id.main_btn_coordinator_layout, R.id.main_btn_toolbar_animation, R.id.main_btn_refresh_layout
-            , R.id.main_btn_learn_json})
+            , R.id.main_btn_learn_json, R.id.main_btn_learn_mvp})
     public void onClick(View view) {
         switch (view.getId()) {
             case R.id.main_btn_coordinator_layout:// 联动控件
@@ -39,6 +40,9 @@ public class MainActivity extends BaseActivity {
                 break;
             case R.id.main_btn_learn_json:// Gson学习
                 startActivity(new Intent(MainActivity.this, LearnGson.class));
+                break;
+            case R.id.main_btn_learn_mvp:// MVP模式小例子
+                startActivity(new Intent(MainActivity.this, UserLoginActivity.class));
                 break;
         }
     }
